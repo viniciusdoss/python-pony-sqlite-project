@@ -5,7 +5,7 @@ def def_users_entity(db, orm):
         first_name = orm.Required(str, 40)
         second_name = orm.Required(str, 40)
         age = orm.Required(int)
-        about = orm.Required(str, nullable=False)
+        about = orm.Optional(str, nullable=False)
         email = orm.Required(str, unique=True)
         posts = orm.Set('Posts')
     return Users
